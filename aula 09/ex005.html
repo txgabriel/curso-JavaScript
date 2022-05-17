@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIMEIROS PASSOS COM DOM</title>
+</head>
+<style>
+    body {
+        background-color: rgb(19, 233, 248);
+        color: white;
+        font: normal 18pt arial;
+
+    }
+
+</style>
+<body>
+      <h1>Iniciando estudos com DOM</h1>
+      <p>aqui vai o resultado</p>
+      <p>aprendendo usar <strong>DOM</strong> em javaScript</p>
+      <div class="msg">clique em mim</div>
+      <script>
+          var corpo = window.document.body
+          var p1 = window.document.getElementsByTagName('p')[1] // serve para ler paragrafo acima
+          window.document.write('está escrito assim: ' + p1.innerText) // innertext ou html serve para mudar texto, por tag ou id
+          var d = window.document.getElementById('msg')
+          d.style.background = 'green'
+          var d = window.document.querySelector('div.msg')
+          d.style.background = 'blue'
+      </script>
+</body>
+</html>
